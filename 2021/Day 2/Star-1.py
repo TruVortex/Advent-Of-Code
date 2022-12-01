@@ -1,6 +1,5 @@
 input = open('input', 'r')
 commands = input.read().split('\n')
-print(commands)
 depth = pos = 0
 for command in commands:
     if command[0] == 'f':
