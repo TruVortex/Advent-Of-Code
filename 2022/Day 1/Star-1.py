@@ -2,7 +2,7 @@ input = open('input', 'r')
 line = input.readline()
 cur = 0
 arr = []
-while line != 'x':
+while line != 'x':  # add x to end of input
     if line == '\n':
         arr.append(cur)
         cur = 0
