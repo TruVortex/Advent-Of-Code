@@ -17,5 +17,4 @@ for line in input:
         ans += 2
     else:
         ans += 3
-    print(ans, move)
 print(ans)
