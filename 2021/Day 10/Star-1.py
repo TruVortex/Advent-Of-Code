@@ -2,7 +2,6 @@ input = open('input', 'r')
 ans = 0
 for line in input:
     line = line.strip()
-    leave = False
     expected = []
     for char in line:
         if char in '([{<':
