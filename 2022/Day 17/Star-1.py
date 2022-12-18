@@ -1,5 +1,5 @@
 moves = open('input', 'r').read().strip()
-top, cnt = 0, 0
+top = cnt = 0
 rocks = {(x, 0) for x in range(7)}
 for i in range(2022):
     rock: tuple
