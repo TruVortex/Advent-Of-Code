@@ -1,7 +1,7 @@
 import re
 
 summate = 0
-for line in open('input', 'r').read().splitlines():
+for line in open('input', 'r'):
     new_line = ''
     for i in range(len(line)):
         if line[i:i + 3] == 'one':
