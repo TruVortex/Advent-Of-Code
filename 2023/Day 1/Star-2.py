@@ -24,6 +24,6 @@ for line in open('input', 'r'):
             new_line += '9'
         else:
             new_line += line[i]
-    new_line = re.sub('\D', '', new_line)
+    new_line = re.sub(r'\D', '', new_line)
     summate += int(new_line[0]) * 10 + int(new_line[-1])
 print(summate)
