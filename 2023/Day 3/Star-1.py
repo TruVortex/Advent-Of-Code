@@ -1,9 +1,8 @@
 schematic = ['.' + line + '.' for line in open('input', 'r').read().splitlines()]
 schematic = ['.' * len(schematic[0])] + schematic + ['.' * len(schematic[0])]
-summate = 0
+summate = cur = 0
+part = False
 for y in range(1, len(schematic) - 1):
-    cur = 0
-    part = False
     for x in range(1, len(schematic[0])):
         if schematic[y][x].isdigit():
             cur *= 10
