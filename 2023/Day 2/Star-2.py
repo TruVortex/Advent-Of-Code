@@ -1,7 +1,7 @@
 summate = 0
 for line in open('input', 'r'):
     subsets = line[line.index(':') + 1:].strip().replace(';', ',').split(', ')
-    seen = {'red': 0, 'green': 0, 'blue': 0}
+    seen = {'red': 1, 'green': 1, 'blue': 1}
     for colour in subsets:
         if colour.endswith('red'):
             seen['red'] = max(seen['red'], int(colour[:-4]))
@@ -9,5 +9,5 @@ for line in open('input', 'r'):
             seen['green'] = max(seen['green'], int(colour[:-6]))
         else:
             seen['blue'] = max(seen['blue'], int(colour[:-5]))
-    summate += max(1, seen['red']) * max(1, seen['green']) * max(1, seen['blue'])
+    summate += seen['red'] * seen['green'] * seen['blue']
 print(summate)
