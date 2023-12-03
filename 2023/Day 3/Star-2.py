@@ -1,5 +1,3 @@
-from itertools import product
-
 schematic = ['.' + line + '.' for line in open('input', 'r').read().splitlines()]
 schematic = ['.' * len(schematic[0])] + schematic + ['.' * len(schematic[0])]
 
