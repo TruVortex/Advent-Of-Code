@@ -1,5 +1,5 @@
 summate = 0
-cnt = [0] * 200
+cnt = [0] * (len(open('input', 'r').readlines()) + 1)
 for card, line in enumerate(open('input', 'r')):
     numbers = line[line.find(':') + 1:].split(' | ')
     winning, owned = list(map(int, numbers[0].split())), list(map(int, numbers[1].split()))
