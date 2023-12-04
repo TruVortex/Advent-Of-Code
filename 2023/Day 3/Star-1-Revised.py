@@ -10,12 +10,9 @@ def get_num(yy, xx):
         xx -= 1
     xx += 1
     start = xx
-    num = 0
     while schematic[yy][xx].isdigit():
-        num *= 10
-        num += int(schematic[yy][xx])
         xx += 1
-    return num, yy, start
+    return int(schematic[yy][start:xx]), yy, start
 
 
 distinct = set()
