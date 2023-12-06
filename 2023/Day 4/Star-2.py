@@ -1,4 +1,3 @@
-summate = 0
 cnt = [1] * (len(open('input', 'r').readlines()) + 1)
 for card, line in enumerate(open('input', 'r')):
     numbers = line[line.find(':') + 1:].split(' | ')
@@ -10,5 +9,4 @@ for card, line in enumerate(open('input', 'r')):
     for i in range(1, cur):
         if card + i < len(cnt):
             cnt[card + i] += cnt[card]
-    summate += cnt[card]
-print(summate)
+print(sum(cnt))
