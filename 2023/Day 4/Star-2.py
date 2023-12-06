@@ -1,9 +1,8 @@
 summate = 0
-cnt = [0] * (len(open('input', 'r').readlines()) + 1)
+cnt = [1] * (len(open('input', 'r').readlines()) + 1)
 for card, line in enumerate(open('input', 'r')):
     numbers = line[line.find(':') + 1:].split(' | ')
     winning, owned = list(map(int, numbers[0].split())), list(map(int, numbers[1].split()))
-    cnt[card] += 1
     cur = 1
     for num in winning:
         if num in owned:
