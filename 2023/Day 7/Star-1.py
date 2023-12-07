@@ -6,13 +6,13 @@ for line in open('input', 'r'):
     hand = hand.replace('Q', 'C')
     hand = hand.replace('J', 'B')
     hand = hand.replace('T', 'A')
-    power = len(set(hand))
     distinct = {}
     for card in hand:
         if card in distinct:
             distinct[card] += 1
         else:
             distinct[card] = 1
+    power = len(set(hand))
     if power == 1:
         hands.append((7, hand, bid))
     elif power == 2:
