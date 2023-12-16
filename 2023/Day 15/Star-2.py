@@ -11,7 +11,7 @@ for operation in open('input', 'r').read().split(','):
         for box in boxes:
             for i in range(len(box)):
                 if box[i][0] == operation[:-1]:
-                    box.remove(box[i])
+                    box.pop(i)
                     break
     else:
         replace = False
