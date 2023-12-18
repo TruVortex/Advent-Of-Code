@@ -12,4 +12,4 @@ while q:
         if not vis[cur[0] + dx][cur[1] + dy]:
             q.append((cur[0] + dx, cur[1] + dy))
             vis[cur[0] + dx][cur[1] + dy] = True
-print(sum([row.count(True) for row in vis]))
+print(sum(row.count(True) for row in vis))
