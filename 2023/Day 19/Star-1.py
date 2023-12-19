@@ -6,7 +6,7 @@ for workflow in workflows.split():
     workflow_rules[workflow[:workflow.find('{')]] = []
     for rule in workflow[workflow.find('{') + 1:-1].split(','):
         if ':' in rule:
-            workflow_rules[workflow[:workflow.find('{')]].append((rule[:rule.find(':')], rule[rule.find(':') + 1:]))
+            workflow_rules[workflow[:workflow.find('{')]].append(rule.split(':'))
         else:
             workflow_rules[workflow[:workflow.find('{')]].append(('True', rule))
 summate = 0
