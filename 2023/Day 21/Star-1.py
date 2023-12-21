@@ -1,5 +1,3 @@
-from collections import deque
-
 grid = ['#' + line.strip() + '#' for line in open('input', 'r')]
 grid = ['#' * len(grid[0])] + grid + ['#' * len(grid[0])]
 q = None
