@@ -1,4 +1,4 @@
-from math import dist, prod
+from math import dist
 
 
 def find(x):
