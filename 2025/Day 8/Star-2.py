@@ -21,9 +21,9 @@ def union(x, y):
 
 boxes, distances = [tuple(map(int, line.split(','))) for line in open('input', 'r')], []
 parent, sizes, ans = [i for i in range(len(boxes))], [1] * len(boxes), -1
-for i, box1 in enumerate(boxes):
+for i, box in enumerate(boxes):
     for j in range(i + 1, len(boxes)):
-        distances.append((dist(box1, boxes[j]), i, j))
+        distances.append((dist(box, boxes[j]), i, j))
 for distance in sorted(distances):
     union(distance[1], distance[2])
 print(ans)
